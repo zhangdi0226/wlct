@@ -75,7 +75,7 @@ window.onload=window.onresize=function(){
 
 var tool = {
     alert: function(val){
-        alert(val)
+        window.wxc.xcConfirm(val);
     }
 }
 
