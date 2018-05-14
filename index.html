@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui">
+    <title>FKS未来潮童海报</title>
+    <link type="text/css" rel="stylesheet" href="css/uploadPicLoadBox.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script src="js/fontRatio.js"></script>
+</head>
+<body class="scroll">
+<!-- body可以添加类scroll -->
+
+    <div class="cover">
+        <p>提示：长按可保存海报</p>
+        <img class="cover_img" />
+    </div>
+
+<!-- 页面 -->
+<div class="page">
+    <canvas id="canvas" style="display:none;"></canvas>
+    
+    <div class="tip">
+        <img src="css/images/btn_tq.png" />
+    </div>
+    <div class="reSelect">
+        <img src="css/images/btn_select.png" />
+    </div>
+    <!-- 代言人特权 -->
+    <div class="tip_layer dyrtq">
+        <div class="middle">
+            <div class="tip_layer_box img">
+                <img src="css/images/tip.png" />
+                <a></a>
+            </div>
+        </div>
+    </div>
+    <!-- 输入框 -->
+    <div class="tip_layer tel_box">
+        <div class="middle">
+            <div class="tip_layer_box">
+                <img src="css/images/icon_input.png" />
+                <p>请填写您的联系方式，更方便我们沟通哦！</p>
+                <p><input type="text" id="tel" placeholder="请输入您的电话号码" /></p>
+                <a class="submit">提交并生成海报</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg" id="bg">
+        <div class="bg_pic">
+            <img class="bg_img" src="css/images/bg.jpg" />
+            <div class="con">
+                <div class="upload_box">
+                    <div class="pic_box" id="picFaId">
+                        <!--<img id="pic" />-->
+                    </div>
+                    <input type="file" name="fileDom" id="fileDom" accept="image/*" capture="camera" multep />
+                </div>
+                <div class="text">
+                    <p>我是<input class="name" id="name" type="text" /></p>
+                    <p>我为FKS未来潮童学院代言</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer img">
+        <img src="css/images/btn_bottom.jpg" />
+    </div>
+</div>
+
+<div class="uploadPicLoadBox uploadPicLoadBox2">
+    <div class="uploadPicLoad">
+        <div class="loadBox">
+            <div class="load8">
+                <div class="load8-container container1">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="load8-container container2">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="load8-container container3">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+            </div>
+            <p>海报生产中</p>
+        </div>
+    </div>
+</div>
+
+<script src="js/fastclick.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/h5MusicBtn.jquery.js"></script>
+<script src="js/exif-MegaPixImage-html2canvas.js"></script>
+<script src="js/uploadPic.jquery.js"></script>
+<script src="js/rotaryScreenLayer.jquery.js"></script>
+<script src="js/index.js"></script>
+<script>
+    // 生成海报
+    function postPic(base64){
+        createPic(base64);
+        
+        // 提交用户信息
+        /*var hd = $('#picDom').attr('src');
+        var nm = $('#name').val();
+        var tl = $('#tel').val();
+        $.ajax({
+            url: '',
+            type: 'post',
+            data: {hd: 'img', nm: '学生', tl: '12345678910'},
+            success: function(){
+
+            },
+            error: function(){
+
+            },
+            complete: function(){
+
+            }
+        })*/
+
+        // 提交海报图片
+        /*$.ajax({
+            url: '',
+            type: 'post',
+            data: {po: base64},
+            success: function(){
+                createPic(base64);
+            },
+            error: function(){
+
+            },
+            complete: function(){
+
+            }
+        })*/
+    }
+</script>
+</body>
+</html>
